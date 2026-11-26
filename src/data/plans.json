@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Klima Start",
+    "price": "$90.000",
+    "purpose": "Tu primera página para que te encuentren y contacten.",
+    "features": [
+      {
+        "path": "M3 5h18v14H3z M3 9h18",
+        "title": "Diseño a medida",
+        "detail": "Una página adaptable a celulares."
+      },
+      {
+        "path": "M3 4h18v13H9l-5 4v-4H3z M7 9h10",
+        "title": "Contacto directo",
+        "detail": "Formulario, WhatsApp y redes."
+      },
+      {
+        "path": "M16 16l5 5 M18 10a8 8 0 1 1-16 0 8 8 0 1 1 16 0",
+        "title": "Presencia en buscadores",
+        "detail": "Configuración SEO básica."
+      }
+    ]
+  },
+  {
+    "name": "Klima Pro",
+    "price": "$160.000",
+    "purpose": "Un sitio que puedes actualizar a medida que creces.",
+    "features": [
+      {
+        "path": "M4 7h13v14H4z M8 3h13v14",
+        "title": "Sitio multipágina",
+        "detail": "Servicios, contacto y formularios."
+      },
+      {
+        "path": "M4 20l5-1L20 8l-4-4L5 15z M13 7l4 4",
+        "title": "Contenido editable",
+        "detail": "Panel para gestionar páginas y blog."
+      },
+      {
+        "path": "M2 8l10-5 10 5-10 5z M6 11v5q6 5 12 0v-5",
+        "title": "Puesta en marcha",
+        "detail": "SEO básico y capacitación."
+      }
+    ]
+  },
+  {
+    "name": "Klima Commerce",
+    "price": "$280.000",
+    "purpose": "Un catálogo o una tienda para recibir pedidos.",
+    "features": [
+      {
+        "path": "M4 8h16l1 13H3z M8 8V6a4 4 0 0 1 8 0v2",
+        "title": "Catálogo de productos",
+        "detail": "Fichas con fotos y descripciones."
+      },
+      {
+        "path": "M3 7l9-5 9 5v10l-9 5-9-5z M3 7l9 5 9-5 M12 12v10",
+        "title": "Gestión de pedidos",
+        "detail": "Administra productos y pedidos."
+      },
+      {
+        "path": "M2 5h20v14H2z M2 10h20 M6 15h4",
+        "title": "Opciones de venta",
+        "detail": "WhatsApp, pagos y envíos según modalidad."
+      }
+    ]
+  }
+]

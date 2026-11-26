@@ -1,0 +1,292 @@
+.compactGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+  margin-top: 30px;
+}
+.compactPlan {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: auto;
+  padding: 28px;
+  border: 1px solid #d2dce1;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.55);
+}
+.compactPlan::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  right: -12px;
+  width: 60px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at 28% 24%,
+    #eafffc,
+    #8aeddf 20%,
+    #28c6c1 43%,
+    #337fdc 70%,
+    #214db4
+  );
+  mask-image: radial-gradient(ellipse closest-side, #000 94%, transparent 100%);
+  transform: rotate(-23deg);
+  pointer-events: none;
+}
+.compactPlan::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 51px;
+  width: 34px;
+  height: 23px;
+  background:
+    radial-gradient(
+        circle 8.5px,
+        #d8f9f6,
+        #87e5de 38%,
+        #41aebc 70%,
+        #3386bb 83%,
+        transparent 100%
+      )
+      left top / 17px 17px no-repeat,
+    radial-gradient(
+        circle 6px,
+        #e4f7ff,
+        #8ecdec 39%,
+        #5696da 70%,
+        #4c86cc 79%,
+        transparent 100%
+      )
+      right bottom / 12px 12px no-repeat;
+  pointer-events: none;
+}
+.compactPlan h3 {
+  font-size: clamp(22px, 2.25vw, 34px);
+  letter-spacing: -0.05em;
+  margin: 24px 0 12px;
+  min-height: 2.1em;
+  line-height: 1.05;
+}
+.compactPlan .planPrice {
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+.planPrice strong {
+  font-size: 28px;
+}
+.compactPlan summary {
+  padding: 12px 0;
+  color: #204a9d;
+  cursor: pointer;
+}
+.compactPlan li {
+  line-height: 1.5;
+  margin: 0.45em 0;
+}
+.compactPlan ul {
+  padding-left: 20px;
+}
+.planAction {
+  display: inline-block;
+  color: #fff;
+  background: #1454eb;
+  padding: 11px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+@media (max-width: 760px) {
+  .compactGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .compactPlan {
+    padding: 21px;
+  }
+  .compactPlan h3 {
+    min-height: 0;
+    margin: 12px 0;
+  }
+}
+.compactGrid {
+  align-items: stretch;
+  grid-auto-rows: auto;
+}
+.compactPlan {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(21px, 2.1vw, 32px);
+  border-radius: 20px;
+}
+.compactPlan h3 {
+  font-size: clamp(22px, 2vw, 32px);
+  line-height: 1.12;
+  min-height: 2.24em;
+  margin: 22px 0 16px;
+}
+.compactPlan .planPrice {
+  margin: 0 0 18px;
+}
+.compactPlan details {
+  margin: 0 0 16px;
+}
+.compactPlan summary {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 1px solid #cbdce7;
+  border-radius: 12px;
+  background: #f2f7fa;
+  color: #153a61;
+  font:
+    600 15px/1.3 Arial,
+    sans-serif;
+  list-style: none;
+  transition:
+    background 0.18s,
+    border-color 0.18s;
+}
+.compactPlan summary::-webkit-details-marker {
+  display: none;
+}
+.compactPlan summary i {
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  border: solid #167e99;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.2s;
+}
+.compactPlan details[open] summary i {
+  transform: translateY(2px) rotate(225deg);
+}
+.compactPlan summary:hover,
+.compactPlan details[open] summary {
+  background: #e7f3f5;
+  border-color: #91bdc9;
+}
+.compactPlan summary:focus-visible,
+.compactPlan .planAction:focus-visible {
+  outline: 3px solid #165ded;
+  outline-offset: 3px;
+}
+.compactPlan .planAction {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: auto;
+  min-height: 46px;
+  font:
+    700 15px/1.3 Arial,
+    sans-serif;
+  text-align: center;
+}
+@media (max-width: 760px) {
+  .compactPlan h3 {
+    min-height: 0;
+    margin: 15px 0 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .compactPlan summary,
+  .compactPlan summary i {
+    transition: none;
+  }
+}
+.compactPlan .kitSpecs {
+  padding: 0;
+  margin: 8px 0 0;
+  list-style: none;
+}
+.compactPlan .kitSpecs li {
+  margin: 0;
+  min-height: 3.6em;
+  padding: 7px 0;
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #dce5e7;
+  font:
+    500 15px/1.35 Arial,
+    sans-serif;
+}
+.kitSpecs li svg {
+  width: 21px;
+  height: 21px;
+  margin: 0;
+  fill: none;
+  stroke: #137f91;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.compactPlan h3 {
+  min-height: 2.24em;
+}
+.compactPlan .planAction {
+  margin-top: auto;
+}
+#servicios .compare {
+  padding: 28px clamp(18px, 2vw, 32px);
+  background: #fffdfb;
+  box-shadow: 0 10px 32px -26px #244b75;
+}
+.compare h3 {
+  min-height: 0;
+  margin: 6px 0 8px;
+  text-align: center;
+  font-size: 24px;
+}
+.compare .planPrice {
+  text-align: center;
+  color: #45566b;
+}
+.compare .planPrice strong {
+  display: block;
+  color: #122541;
+  font-size: clamp(32px, 3vw, 52px);
+  letter-spacing: -0.055em;
+}
+.compare .purpose {
+  margin: 4px -12px 12px;
+  padding: 12px 14px;
+  background: #eef5f6;
+  border-radius: 10px;
+  text-align: center;
+  display: grid;
+  align-content: center;
+  min-height: 4.6em;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.compare .kitSpecs {
+  margin: 0 0 18px;
+}
+.compare .kitSpecs li {
+  min-height: 5.4em;
+  gap: 13px;
+}
+.compare .kitSpecs b {
+  display: block;
+  margin-bottom: 3px;
+  color: #142b45;
+}
+.compare .kitSpecs span {
+  color: #425469;
+}
+.compare .kitSpecs svg {
+  stroke: #0c929b;
+}
+.compare .planAction {
+  margin-top: auto;
+}

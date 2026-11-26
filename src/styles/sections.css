@@ -1,0 +1,321 @@
+.page {
+  padding: clamp(54px, 7vw, 110px) max(7vw, calc((100vw - 1450px) / 2));
+  scroll-margin-top: 12px;
+}
+.page p {
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+.page .label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2450b1;
+  margin: 0 0 20px;
+}
+.page h2 {
+  font-size: clamp(40px, 5vw, 80px);
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+  margin: 0 0 22px;
+  text-wrap: balance;
+}
+.about {
+  background: #eaf1ed;
+}
+.aboutIntro {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 6vw;
+  align-items: center;
+}
+.services {
+  background: #f8f7f3;
+}
+@media (max-width: 760px) {
+  .aboutIntro {
+    grid-template-columns: 1fr;
+  }
+  .page {
+    padding: 46px 6vw;
+  }
+  header {
+    flex-wrap: wrap;
+  }
+  header nav {
+    max-width: 100%;
+    gap: 15px;
+  }
+}
+body {
+  background: #fcf9f6;
+}
+.about,
+.services,
+#contacto {
+  background: transparent;
+}
+.page {
+  position: relative;
+}
+.about {
+  background: radial-gradient(ellipse at 78% 42%, #dcf6f16b, transparent 49%);
+}
+.services {
+  background:
+    radial-gradient(ellipse at 15% 72%, #d8f9ee70, transparent 55%),
+    radial-gradient(ellipse at 90% 54%, #e3eaff8c, transparent 57%);
+}
+.aboutIntro {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+.about h2,
+.services h2,
+#contacto h2 {
+  color: #10192c;
+}
+.about h2 em,
+.services h2 em {
+  font-style: normal;
+  color: #225bdf;
+}
+.page .label {
+  color: #215bdd;
+}
+@keyframes tide {
+  to {
+    transform: translateY(-9px) rotate(-20deg);
+  }
+}
+@keyframes arrive {
+  from {
+    opacity: 0.4;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .arrived {
+    animation: arrive 0.65s ease-out both;
+  }
+}
+@media (max-width: 760px) {
+  .aboutIntro {
+    grid-template-columns: 1fr;
+  }
+}
+#nosotros {
+  background: linear-gradient(120deg, #fcf9f6, #f1f5ff);
+}
+#nosotros .aboutIntro {
+  grid-template-columns: 1.03fr 1fr;
+  gap: 3vw;
+}
+#nosotros h2 {
+  font-size: clamp(32px, 3.3vw, 55px);
+  line-height: 1.09;
+  letter-spacing: -0.047em;
+}
+#nosotros .cta {
+  margin-top: 8px;
+}
+#nosotros .label {
+  display: inline-block;
+  padding: 5px 16px;
+  background: #dfedfc;
+  border-radius: 40px;
+}
+.notebook {
+  position: relative;
+  aspect-ratio: 1;
+  isolation: isolate;
+}
+.scene {
+  width: 100%;
+  display: block;
+  mask-image:
+    linear-gradient(90deg, transparent, #000 5%, #000 96%, transparent),
+    linear-gradient(0deg, transparent, #000 9%, #000 94%, transparent);
+  mask-composite: intersect;
+}
+.displayK {
+  position: absolute;
+  left: 42.45%;
+  top: 29%;
+  width: 36%;
+  height: 26.7%;
+  transform-origin: 0 0;
+  transform: matrix(1, 0.19, -0.26, 1, 0, 0);
+  background: #edf0fb;
+  display: grid;
+  place-items: center;
+}
+.micro {
+  width: 64%;
+  aspect-ratio: 880/760;
+  position: relative;
+  mix-blend-mode: multiply;
+}
+.micro img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+.notebook output {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  font-size: 15px;
+  color: #164887;
+}
+.notebook output:not(:empty) {
+  background: #f5f8ffed;
+  padding: 7px;
+  border-radius: 12px;
+}
+@media (max-width: 760px) {
+  #nosotros .aboutIntro {
+    grid-template-columns: 1fr;
+  }
+  .notebook {
+    width: min(100%, 490px);
+    margin: auto;
+  }
+}
+.displayK {
+  background: linear-gradient(120deg, #e9effc, #e0e9fc);
+  mask-image:
+    linear-gradient(90deg, transparent, #000 17%, #000 83%, transparent),
+    linear-gradient(0deg, transparent, #000 14%, #000 86%, transparent);
+  mask-composite: intersect;
+}
+.micro {
+  mask-image: radial-gradient(ellipse 67% 72%, #000 69%, transparent 100%);
+  mix-blend-mode: multiply;
+  width: 66%;
+}
+#nosotros .aboutIntro > div:first-child > p:not(.label) {
+  max-width: 43ch;
+  margin: 1em 0 1.4em;
+}
+#servicios > .label,
+#servicios > h2,
+#servicios > .kitIntro {
+  text-align: center;
+}
+#servicios > .kitIntro {
+  max-width: 62ch;
+  margin-inline: auto;
+  text-wrap: pretty;
+}
+/* Burbujas decorativas en los márgenes de cada sección. */
+#inicio,
+#nosotros,
+#contacto {
+  position: relative;
+  isolation: isolate;
+}
+#inicio::before,
+#nosotros::after,
+#contacto::before,
+#contacto::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  width: var(--diameter);
+  height: var(--diameter);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at 29% 19%,
+    #fff 1%,
+    #62f5e3 11%,
+    #03cfbb 30%,
+    #087be9 55%,
+    #0649ff 75%,
+    #103abd 97%
+  );
+  box-shadow:
+    inset -2px -3px 5px #153aa938,
+    0 5px 12px #097da215;
+}
+#inicio::before {
+  --diameter: 18px;
+  left: 4%;
+  bottom: 12%;
+  opacity: 0.74;
+}
+#nosotros::after {
+  --diameter: 27px;
+  right: 3%;
+  top: 9%;
+  opacity: 0.76;
+}
+#contacto::before {
+  --diameter: 42px;
+  left: 3%;
+  bottom: 14%;
+  opacity: 0.78;
+}
+#contacto::after {
+  --diameter: 13px;
+  left: 6.8%;
+  bottom: 12%;
+  opacity: 0.72;
+}
+@media (max-width: 760px) {
+  #inicio::before {
+    --diameter: 12px;
+    bottom: 4%;
+    left: 5%;
+  }
+  #nosotros::after {
+    --diameter: 16px;
+    top: 23px;
+    right: 7%;
+  }
+  #contacto::before {
+    --diameter: 20px;
+    left: auto;
+    right: 7%;
+    top: 12px;
+    bottom: auto;
+  }
+  #contacto::after {
+    display: none;
+  }
+}
+.displayK {
+  background: transparent;
+  mask: none;
+}
+.micro {
+  mask: none;
+  mix-blend-mode: normal;
+}
+html,
+body {
+  background: #fcf9f6;
+}
+body #inicio,
+body #nosotros,
+body #servicios {
+  background: transparent;
+  border-block: 0;
+}
+header {
+  background: #fcf9f6;
+}
+.notebook .scene {
+  mask-image: radial-gradient(
+    ellipse 69% 68% at 52% 49%,
+    #000 56%,
+    transparent 95%
+  );
+}
